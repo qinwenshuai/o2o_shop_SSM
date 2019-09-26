@@ -1,0 +1,15 @@
+2019-09-26 13:54:13.263 [main] DEBUG com.qws.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
+2019-09-26 13:54:13.288 [main] DEBUG com.qws.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 10(Long), 测试的店铺(String), test(String), test(String), test(String), test(String), null, 2019-09-26 13:54:13.051(Timestamp), null, 0(Integer), 审核中(String)
+2019-09-26 13:54:13.295 [main] DEBUG com.qws.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2019-09-26 13:59:11.536 [main] DEBUG com.qws.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_desc=?, shop_addr=?, last_edit_time=? where shop_id=? 
+2019-09-26 13:59:11.559 [main] DEBUG com.qws.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试描述(String), 测试地址(String), 2019-09-26 13:59:11.309(Timestamp), 1(Long)
+2019-09-26 13:59:11.567 [main] DEBUG com.qws.o2o.dao.ShopDao.updateShop - <==    Updates: 1
+2019-09-26 16:18:42.316 [main] DEBUG com.qws.o2o.dao.ShopDao.insertShop - ==>  Preparing: INSERT INTO tb_shop(owner_id, area_id, shop_category_id, shop_name, shop_desc, shop_addr, phone, shop_img, priority, create_time, last_edit_time, enable_status, advice) VALUES (?,?,?,?, ?,?,?,?,?, ?,?, ?,?) 
+2019-09-26 16:18:42.337 [main] DEBUG com.qws.o2o.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 10(Long), 测试的店铺3(String), test3(String), test3(String), test3(String), null, null, 2019-09-26 16:18:42.304(Timestamp), 2019-09-26 16:18:42.304(Timestamp), 0(Integer), 审核中(String)
+2019-09-26 16:18:42.339 [main] DEBUG com.qws.o2o.dao.ShopDao.insertShop - <==    Updates: 1
+2019-09-26 16:18:42.365 [main] DEBUG com.qws.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\47\2019092616184271906.jpg
+2019-09-26 16:18:42.365 [main] DEBUG com.qws.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\upload\images\item\shop\47\2019092616184271906.jpg
+2019-09-26 16:18:42.365 [main] DEBUG com.qws.o2o.util.ImageUtil - basePath is :/F:/Teameclipse-workspace/o2o/target/test-classes/
+2019-09-26 16:18:42.664 [main] DEBUG com.qws.o2o.dao.ShopDao.updateShop - ==>  Preparing: update tb_shop SET shop_name=?, shop_desc=?, shop_addr=?, phone=?, shop_img=?, last_edit_time=?, enable_status=?, advice=?, area_id=?, shop_category_id=? where shop_id=? 
+2019-09-26 16:18:42.665 [main] DEBUG com.qws.o2o.dao.ShopDao.updateShop - ==> Parameters: 测试的店铺3(String), test3(String), test3(String), test3(String), \upload\images\item\shop\47\2019092616184271906.jpg(String), 2019-09-26 16:18:42.304(Timestamp), 0(Integer), 审核中(String), 2(Integer), 10(Long), 47(Long)
+2019-09-26 16:18:42.666 [main] DEBUG com.qws.o2o.dao.ShopDao.updateShop - <==    Updates: 1
