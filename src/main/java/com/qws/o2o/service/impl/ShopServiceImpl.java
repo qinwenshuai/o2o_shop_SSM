@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.qws.o2o.dao.ShopDao;
 import com.qws.o2o.dto.ImageHolder;
 import com.qws.o2o.dto.ShopExecution;
+import com.qws.o2o.entity.PersonInfo;
 import com.qws.o2o.entity.Shop;
 import com.qws.o2o.enums.ShopStateEnum;
 import com.qws.o2o.exceptions.ShopOperationException;
@@ -29,7 +30,11 @@ public class ShopServiceImpl implements ShopService {
 			return new ShopExecution(ShopStateEnum.NULL_SHOP);
 		}
 		try {
+			
 			// 给店铺信息赋初始值
+			PersonInfo owner = new PersonInfo();
+			owner.setUserId(1l);
+			shop.setOwner(owner);
 			shop.setEnableStatus(0);
 			shop.setCreateTime(new Date());
 			shop.setLastEditTime(new Date());

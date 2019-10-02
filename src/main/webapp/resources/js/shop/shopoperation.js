@@ -22,7 +22,7 @@ $(function() {
 	function getShopInfo(shopId) {
 		$.getJSON(shopInfoUrl, function(data) {
 			if (data.success) {
-				// 若访问成功，则依据后台传递过来的店铺信息为表单元素赋值
+			// 若访问成功，则依据后台传递过来的店铺信息为表单元素赋值
 				var shop = data.shop;
 				$('#shop-name').val(shop.shopName);
 				$('#shop-addr').val(shop.shopAddr);
@@ -30,12 +30,12 @@ $(function() {
 				$('#shop-desc').val(shop.shopDesc);
 				// 给店铺类别选定原先的店铺类别值
 				var shopCategory = '<option data-id="'
-						+ shop.shopCategory.shopCategoryId + '" selected>'
-						+ shop.shopCategory.shopCategoryName + '</option>';
+				+ shop.shopCategory.shopCategoryId + '" selected>'
+				+ shop.shopCategory.shopCategoryName + '</option>';
 				var tempAreaHtml = '';
 				// 初始化区域列表
 				data.areaList.map(function(item, index) {
-					tempAreaHtml += '<option data-id="' + item.areaId + '">'
+			tempAreaHtml += '<option data-id="' + item.areaId + '">'
 							+ item.areaName + '</option>';
 				});
 				$('#shop-category').html(shopCategory);
@@ -43,12 +43,12 @@ $(function() {
 				$('#shop-category').attr('disabled', 'disabled');
 				$('#area').html(tempAreaHtml);
 				// 给店铺选定原先的所属的区域
-				$("#area option[data-id='" + shop.area.areaId + "']").attr(
+		$("#area option[data-id='" + shop.area.areaId + "']").attr(
 						"selected", "selected");
 			}
 		});
 	}
-	// 取得所有二级店铺类别以及区域信息，并分别赋值进类别列表以及区域列表
+// 取得所有二级店铺类别以及区域信息，并分别赋值进类别列表以及区域列表
 	function getShopInitInfo() {
 		$.getJSON(initUrl, function(data) {
 			if (data.success) {
@@ -56,10 +56,10 @@ $(function() {
 				var tempAreaHtml = '';
 				data.shopCategoryList.map(function(item, index) {
 					tempHtml += '<option data-id="' + item.shopCategoryId
-							+ '">' + item.shopCategoryName + '</option>';
+					+ '">' + item.shopCategoryName + '</option>';
 				});
 				data.areaList.map(function(item, index) {
-					tempAreaHtml += '<option data-id="' + item.areaId + '">'
+			tempAreaHtml += '<option data-id="' + item.areaId + '">'
 							+ item.areaName + '</option>';
 				});
 				//将从后台获取的店铺分类和所属区域填充到前台对应的位置。
@@ -99,7 +99,7 @@ $(function() {
 		var formData = new FormData();
 		// 添加图片流进表单对象里
 		formData.append('shopImg', shopImg);
-		// 将shop json对象转成字符流保存至表单对象key为shopStr的的键值对里
+// 将shop json对象转成字符流保存至表单对象key为shopStr的的键值对里
 		formData.append('shopStr', JSON.stringify(shop));
 		// 获取表单里输入的验证码
 		var verifyCodeActual = $('#j_captcha').val();
@@ -122,7 +122,7 @@ $(function() {
 					$.toast('提交成功！');
 					if (!isEdit) {
 						// 若为注册操作，成功后返回店铺列表页
-						window.location.href = "/shopadmin/shoplist";
+				window.location.href = "/shopadmin/shoplist";
 					}
 				} else {
 					$.toast('提交失败！' + data.errMsg);

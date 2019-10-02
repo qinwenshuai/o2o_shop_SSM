@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qws.o2o.dao.ProductDao">
+	<update id="updateProductCategoryToNull">
+		update tb_product set product_category_id = null 
+		where product_category_id = #{productCategoryId}
+	</update>
+
+	
+
+</mapper>
