@@ -1,4 +1,4 @@
-package com.qws.o2o.util; 
+package com.qws.o2o.util;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,15 +8,10 @@ import javax.imageio.ImageIO;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
 
-
-/**
- *
- * 项目名称：o2o   
- * 类名称：ImageUtilTest   
- * 类描述：   
- * 创建人：秦文帅   
- * 创建时间：2019年9月26日 下午2:33:38   
- * 
+/** 
+ * @author 作者 cc E-mail: bluecats2010@163.com
+ * @version 创建时间：2017年11月9日 下午5:20:41 
+ * 类说明 
  */
 public class ImageUtilTest {
 	public static void main(String[] args) throws IOException {

@@ -2,15 +2,6 @@ package com.qws.o2o.util;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- *
- * 项目名称：o2o   
- * 类名称：HttpServletRequestUtil   
- * 类描述：   
- * 创建人：秦文帅   
- * 创建时间：2019年9月26日 下午2:33:59   
- * 
- */
 public class HttpServletRequestUtil {
 	//从request对象中接收到的参数值是String类型（如年龄），则对String类型进行转整数处理
 	public static int getInt(HttpServletRequest request, String key) {

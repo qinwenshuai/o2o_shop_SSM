@@ -30,15 +30,15 @@ public class ProductCategoryManagementController {
 	@RequestMapping(value = "/getproductcategorylist", method = RequestMethod.GET)
 	@ResponseBody
 	private Result<List<ProductCategory>> getProductCategoryList(HttpServletRequest request) {
-//		Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
+		Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
 		List<ProductCategory> list = null;
-//		if (currentShop != null && currentShop.getShopId() > 0) {
-			list = productCategoryService.getProductCategoryList(29);
+		if (currentShop != null && currentShop.getShopId() > 0) {
+			list = productCategoryService.getProductCategoryList(currentShop.getShopId());
 			return new Result<List<ProductCategory>>(true, list);
-//		} else {
-//			ProductCategoryStateEnum ps = ProductCategoryStateEnum.INNER_ERROR;
-//			return new Result<List<ProductCategory>>(false, ps.getState(), ps.getStateInfo());
-//		}
+		} else {
+			ProductCategoryStateEnum ps = ProductCategoryStateEnum.INNER_ERROR;
+			return new Result<List<ProductCategory>>(false, ps.getState(), ps.getStateInfo());
+		}
 	}
 
 	@RequestMapping(value = "/addproductcategorys", method = RequestMethod.POST)

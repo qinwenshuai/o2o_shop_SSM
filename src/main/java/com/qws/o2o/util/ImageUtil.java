@@ -17,15 +17,6 @@ import com.qws.o2o.dto.ImageHolder;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
 
-/**
- *
- * 项目名称：o2o   
- * 类名称：ImageUtil   
- * 类描述：   
- * 创建人：秦文帅   
- * 创建时间：2019年9月26日 下午2:33:47   
- * 
- */
 public class ImageUtil {
 	private static String basePath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
 	private static final SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");

@@ -1,14 +1,5 @@
 package com.qws.o2o.util;
 
-/**
- *
- * 项目名称：o2o   
- * 类名称：PathUtil   
- * 类描述：   
- * 创建人：秦文帅   
- * 创建时间：2019年9月26日 下午2:33:29   
- * 
- */
 public class PathUtil {
 	private static String seperator = System.getProperty("file.separator");
 	//返回项目图片的根路径
